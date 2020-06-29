@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:song="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.activity.HomeActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/home_table_bar"
+        android:id="@+id/home_frameLayout" />
+
+    <View
+        android:layout_alignTop="@id/home_table_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1A000000" />
+
+    <LinearLayout
+        android:background="#F0F0F0"
+        android:paddingTop="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:id="@+id/home_table_bar" >
+
+        <com.ye.futurecarefree.ui.customUI.HomeTableBarLinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            song:btnType="home"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_table_bar_home" />
+        <com.ye.futurecarefree.ui.customUI.HomeTableBarLinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            song:btnType="message"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_table_bar_message" />
+        <com.ye.futurecarefree.ui.customUI.HomeTableBarLinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            song:btnType="edu"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_table_bar_edu" />
+        <com.ye.futurecarefree.ui.customUI.HomeTableBarLinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            song:btnType="resume"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_table_bar_resume" />
+        <com.ye.futurecarefree.ui.customUI.HomeTableBarLinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            song:btnType="my"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_table_bar_my" />
+    </LinearLayout>
+
+
+</RelativeLayout>

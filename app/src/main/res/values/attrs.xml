@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="HomeTableBarLinearLayout">
+        <attr name="btnType" format="enum">
+            <enum name="home" value="1" />
+            <enum name="message" value="2" />
+            <enum name="edu" value="3" />
+            <enum name="resume" value="4" />
+            <enum name="my" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="HomepageShortcutItem">
+        <attr name="shortcutType" format="enum">
+            <enum name="LookMy" value="0" />
+            <enum name="ask" value="1" />
+            <enum name="nearby" value="2" />
+            <enum name="cultivate" value="3" />
+            <enum name="school" value="4" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="HomepageVocationItem">
+        <attr name="title" format="string" />
+        <attr name="desc" format="string" />
+        <attr name="background" format="reference" />
+    </declare-styleable>
+
+    
+</resources>

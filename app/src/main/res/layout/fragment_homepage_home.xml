@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:My="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_fragment_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--    头部搜索框-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/home_search_select"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/homePage_location_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:drawableRight="@drawable/home_location"
+                android:drawablePadding="5dp"
+                android:text="深圳"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/homePage_location_tv"
+                android:background="#000000" />
+
+            <LinearLayout
+                android:id="@+id/homePage_search_post"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/home_search" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="搜出你想要的好职位!" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!--    显示悬浮标题栏的布局-->
+    <LinearLayout
+        android:id="@+id/homepage_suspension_titleTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <com.ye.futurecarefree.ui.customUI.SuspensionTitleScrollView
+        android:id="@+id/homepage_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/homepage_scroll_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/homePage_banner_vp"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="20dp">
+
+                        <ImageView
+                            android:id="@+id/homepage_banner_indicate1"
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:layout_margin="5dp"
+                            android:background="@android:drawable/presence_invisible" />
+
+                        <ImageView
+                            android:id="@+id/homepage_banner_indicate2"
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:layout_margin="5dp"
+                            android:background="@android:drawable/presence_invisible" />
+
+                        <ImageView
+                            android:id="@+id/homepage_banner_indicate3"
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:layout_margin="5dp"
+                            android:background="@android:drawable/presence_invisible" />
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/home_banner_mask" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.ye.futurecarefree.ui.customUI.HomepageShortcutItem
+                        android:id="@+id/homepage_shortcut_lookMy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        My:shortcutType="LookMy" />
+
+                    <com.ye.futurecarefree.ui.customUI.HomepageShortcutItem
+                        android:id="@+id/homepage_shortcut_ask"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        My:shortcutType="ask" />
+
+                    <com.ye.futurecarefree.ui.customUI.HomepageShortcutItem
+                        android:id="@+id/homepage_shortcut_nearby"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        My:shortcutType="nearby" />
+
+                    <com.ye.futurecarefree.ui.customUI.HomepageShortcutItem
+                        android:id="@+id/homepage_shortcut_cultivate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        My:shortcutType="cultivate" />
+
+                    <com.ye.futurecarefree.ui.customUI.HomepageShortcutItem
+                        android:id="@+id/homepage_shortcut_school"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        My:shortcutType="school" />
+                </LinearLayout>
+
+                <View style="@style/view" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="职场能力"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="助你开启职场升级之路" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp">
+
+                    <com.ye.futurecarefree.ui.customUI.HomepageVocationItem
+                        android:id="@+id/homepage_vocation_zhizhao"
+                        android:layout_width="110dp"
+                        android:layout_height="150dp"
+                        My:background="@color/linearView"
+                        My:desc="领求职特权"
+                        My:title="大公司直招" />
+
+                    <com.ye.futurecarefree.ui.customUI.HomepageVocationItem
+                        android:id="@+id/homepage_vocation_mingqi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="73dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@id/homepage_vocation_zhizhao"
+                        My:background="@color/linearView"
+                        My:desc="轻松跳槽"
+                        My:title="高薪进名企" />
+
+                    <com.ye.futurecarefree.ui.customUI.HomepageVocationItem
+                        android:id="@+id/homepage_vocation_fuwuye"
+                        android:layout_width="wrap_content"
+                        android:layout_height="73dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@id/homepage_vocation_mingqi"
+                        My:background="@color/linearView"
+                        My:desc="急招入职快"
+                        My:title="服务业招聘" />
+
+                    <com.ye.futurecarefree.ui.customUI.HomepageVocationItem
+                        android:id="@+id/homepage_vocation_school"
+                        android:layout_width="wrap_content"
+                        android:layout_height="73dp"
+                        android:layout_below="@id/homepage_vocation_mingqi"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/homepage_vocation_zhizhao"
+                        My:background="@color/linearView"
+                        My:desc="高薪转正"
+                        My:title="2020校招" />
+
+                    <com.ye.futurecarefree.ui.customUI.HomepageVocationItem
+                        android:id="@+id/homepage_vocation_lietou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="73dp"
+                        android:layout_below="@id/homepage_vocation_mingqi"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/homepage_vocation_school"
+                        My:background="@color/linearView"
+                        My:desc="用脉可寻"
+                        My:title="找猎头" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:drawableStart="@drawable/home_textual"
+                    android:drawablePadding="10dp"
+                    android:text="高薪求职第一步:1V1专业简历定制"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:drawableStart="@drawable/home_textual"
+                    android:drawablePadding="10dp"
+                    android:text="博学谷女神带你入门Python"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:drawableStart="@drawable/home_textual"
+                    android:drawablePadding="10dp"
+                    android:text="中国在线数据马拉松,立即报名"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:drawableStart="@drawable/home_textual"
+                    android:drawablePadding="10dp"
+                    android:text="当客服小姐姐接到这样的电话"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:drawableStart="@drawable/home_textual"
+                    android:drawablePadding="10dp"
+                    android:text="面试官布置作业，做不做？"
+                    android:textSize="14sp" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/homepage_between_banner_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="#000000" />
+
+                <View
+                    style="@style/view"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/homepage_suspension_titleOne"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/homepage_suspension_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="精选职位"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/homepage_batch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:text="批量申请"
+                        android:textColor="#2196F3"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="#C8C8C8" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--                底下条目，在代码中请求服务器获取精选职位，在动态添加进来-->
+            <LinearLayout
+                android:id="@+id/homepage_choiceness_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+
+    </com.ye.futurecarefree.ui.customUI.SuspensionTitleScrollView>
+
+
+
+
+</LinearLayout>
+

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="105dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/choiceness_content_positionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Android工程师"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/choiceness_content_incType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="民营公司"
+            app:layout_constraintStart_toStartOf="@+id/choiceness_content_positionName"
+            app:layout_constraintTop_toBottomOf="@+id/choiceness_content_positionName" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="2dp"
+            android:background="#C8C8C8"
+            app:layout_constraintBottom_toBottomOf="@+id/choiceness_content_incType"
+            app:layout_constraintStart_toEndOf="@+id/choiceness_content_incType"
+            app:layout_constraintTop_toTopOf="@+id/choiceness_content_incType" />
+
+        <TextView
+            android:id="@+id/choiceness_content_schoolage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="大专"
+            app:layout_constraintStart_toEndOf="@+id/choiceness_content_incType"
+            app:layout_constraintTop_toTopOf="@+id/choiceness_content_incType" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="2dp"
+            android:background="#C8C8C8"
+            app:layout_constraintBottom_toBottomOf="@+id/choiceness_content_incType"
+            app:layout_constraintStart_toEndOf="@+id/choiceness_content_schoolage"
+            app:layout_constraintTop_toTopOf="@+id/choiceness_content_incType" />
+
+        <TextView
+            android:id="@+id/choiceness_content_experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="3-4年"
+            app:layout_constraintBottom_toBottomOf="@+id/choiceness_content_incType"
+            app:layout_constraintStart_toEndOf="@+id/view2"
+            app:layout_constraintTop_toTopOf="@+id/choiceness_content_incType"
+            tools:layout_editor_absoluteY="35dp" />
+
+
+        <TextView
+            android:id="@+id/choiceness_content_incName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="深圳市车益图科技有限公司"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/choiceness_content_incType"
+            app:layout_constraintTop_toBottomOf="@+id/choiceness_content_incType" />
+
+        <TextView
+            android:id="@+id/choiceness_content_ask"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/help_dot_focus"
+            android:gravity="center"
+            android:text="申请"
+            android:textColor="@color/a"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteX="349dp"
+            tools:layout_editor_absoluteY="74dp" />
+
+        <TextView
+            android:id="@+id/choiceness_content_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.8-1.5万/月"
+            android:textColor="@color/a"
+            app:layout_constraintEnd_toEndOf="@+id/choiceness_content_ask"
+            app:layout_constraintTop_toTopOf="@+id/choiceness_content_positionName" />
+
+        <TextView
+            android:id="@+id/choiceness_content_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="深圳"
+            app:layout_constraintEnd_toEndOf="@+id/choiceness_content_ask"
+            app:layout_constraintTop_toBottomOf="@+id/choiceness_content_money" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View style="@style/view" />
+</LinearLayout>
+
+

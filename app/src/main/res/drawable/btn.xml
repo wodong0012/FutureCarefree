@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <!-- 圆角的度数-->
+            <corners android:radius="6dp" />
+            <!-- 背景色-->
+            <solid android:color="#FF7800" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="8dp" />
+            <solid android:color="#FF9600" />
+        </shape>
+    </item>
+</selector>
